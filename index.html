@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayush Sharma Portfolio</title>
+  <!-- Import Roboto from Google Fonts as a substitute for San Francisco -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Hero Section with Geometric Background -->
+  <div class="hero">
+    <!-- SVG Background with Grid and Triangle -->
+    <svg class="svg-bg" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Grid Pattern -->
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M40 0 L0 0 L0 40" fill="none" stroke="white" stroke-width="0.5" />
+        </pattern>
+      </defs>
+      <!-- Apply grid pattern -->
+      <rect width="800" height="600" fill="url(#grid)" opacity="0.15" />
+      <!-- Triangle Shape -->
+      <polygon points="400,100 600,500 200,500" fill="none" stroke="white" stroke-width="3" opacity="0.3" />
+    </svg>
+    
+    <!-- Hero Text Content (Centered) -->
+    <div class="container">
+      <div class="name reveal">aayush sharma</div>
+      <div class="tagline reveal">coming soon</div>
+    </div>
+  </div>
+  
+  <!-- Bio Section (Below the Hero, Left-Aligned) -->
+  <section class="bio-section">
+    <h2 class="reveal">Who I am?</h2>
+    <p class="reveal">
+      I’m Aayush Sharma, a 14-year-old developer and co-founder of Remotikal, Inc. and Pi, Inc.
+      I specialize in software, kernel, and full-stack development—crafting innovative enterprise, AI, and neural network solutions.
+    </p>
+  </section>
+  
+  <!-- JavaScript for the text reveal effect -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      reveals.forEach(reveal => observer.observe(reveal));
+    });
+  </script>
+</body>
+</html>

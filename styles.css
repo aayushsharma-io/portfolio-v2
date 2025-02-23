@@ -1,0 +1,106 @@
+/* Import local Apple Garamond fonts */
+@font-face {
+    font-family: "Apple Garamond";
+    src: url("AppleGaramond.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Apple Garamond Bold";
+    src: url("AppleGaramond-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Apple Garamond Light Italic";
+    src: url("AppleGaramond-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  /* Global Reset and Body Styling */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Apple Garamond", sans-serif;
+  }
+  
+  /* Hero Section (Full viewport height, centered content) */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .name {
+    font-family: "Apple Garamond Bold", "Apple Garamond", sans-serif;
+    font-size: 5em;
+    letter-spacing: 2px;
+  }
+  
+  .tagline {
+    font-family: "Apple Garamond Light Italic", "Apple Garamond", sans-serif;
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
+  /* SVG Background (Grid and Triangle) */
+  .svg-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  /* Bio Section (Left-aligned) */
+  .bio-section {
+    padding: 80px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .bio-section h2 {
+    font-family: "Apple Garamond", sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .bio-section p {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  /* Text Reveal on Scroll with Slower Transition */
+  .reveal {
+    opacity: 0;
+    filter: blur(4px);
+    transition: opacity 2s ease-out, filter 2s ease-out;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    filter: blur(0);
+  }
+  

@@ -1,0 +1,1 @@
+AppleGaramond.ttf AppleGaramond-Bold.ttf AppleGaramond-BoldItalic.ttf AppleGaramond-Italic.ttf AppleGaramond-Light.ttf AppleGaramond-LightItalic.ttf
